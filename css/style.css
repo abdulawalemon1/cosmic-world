@@ -153,3 +153,44 @@ nav{
     text-decoration: none;
     color:#FF008E;
 }
+/*------------- ------------
+---------Gallery css-------
+-------------------------- */
+.gallery{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:30px;
+    
+}
+.photo img{
+    width:100%;
+    height: 200px;
+    object-fit: cover;
+    border:3px solid #FF008E;
+}
+/* contact part css */
+.contact{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.contact-left img{
+    width:100%;
+}
+.contact-right form{
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+}
+.text-field{
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    font-family: inherit;
+    outline: 0;
+    border:1px solid #FF008E;
+}
+footer{
+    display: flex;
+    justify-content: center;
+}
