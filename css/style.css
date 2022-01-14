@@ -5,6 +5,9 @@
     box-sizing: border-box;
 
 }
+html{
+    scroll-behavior: smooth;
+}
 body{
     font-family: 'Poppins', sans-serif;
 }
@@ -52,11 +55,17 @@ body{
     border-bottom: 2px solid #FF008E;
     margin: 50px 0;
 }
+#nav-toggler{
+    display: none;
+}
+.nav-toggler-icon{
+    display: none;
+}
 /*-------- ----------
 --------header styles------
 -------------------------- */
 header{
-    height: 100vh;
+    
     background-image: url('../images/cloud.png');
     background-repeat: no-repeat;
     background-size: cover;
@@ -67,6 +76,7 @@ nav{
     display:flex;
     justify-content: space-between;
     height:80px;
+    align-items: center;
 }
 .navigation{
     display:flex;
@@ -87,7 +97,8 @@ nav{
 --------banner styles------
 -------------------------- */
 .banner{
-    height: calc(100vh- 80px);
+    height: calc(100vh - 80px);
+    min-height: 500px;
     display: grid;
     grid-template-columns: 1fr 1fr;
    
@@ -193,4 +204,62 @@ nav{
 footer{
     display: flex;
     justify-content: center;
+    margin-top: 50px;
+}
+
+/* responsive css */
+@media (max-width:950px)  {
+    .gallery{
+        grid-template-columns: 1fr 1fr;
+    }
+    .banner-left h1{
+        font-size: 35px;
+    }
+
+}
+@media (max-width:800px) {
+   
+    .banner{
+        grid-template-columns: 1fr;
+        height: fit-content;
+        grid-template-columns: 1fr;
+    }
+    .banner-left{
+        order: 2;
+        padding: 50px 0;
+    }
+    .feature,.gallery,.contact{
+        grid-template-columns: 1fr;
+        
+    }
+    .photo img{
+        max-width: 350px;
+        
+    }
+    .photo{
+        text-align:center;
+    }
+    #nav-toggler{
+        display: none;
+    }
+    .nav-toggler-icon{
+        display: block;
+        color: white;
+        font-size: 30px;
+
+    }
+    .navigation{
+        position: absolute;
+        top:80px;
+        left: 0;
+        width: 100%; 
+        flex-direction: column;
+        background-color: rgba(26, 26, 112, 0.698);
+        padding: 20px 0;
+        transform: translateY(-330px);
+        transition: .5s ease-in;
+    }
+    #nav-toggler:checked ~ .navigation{
+        transform: translateY(0px);
+    }
 }
