@@ -256,7 +256,7 @@ footer{
         flex-direction: column;
         background-color: rgba(26, 26, 112, 0.698);
         padding: 20px 0;
-        transform: translateY(-330px);
+        transform: translateY(-340px);
         transition: .5s ease-in;
     }
     #nav-toggler:checked ~ .navigation{
